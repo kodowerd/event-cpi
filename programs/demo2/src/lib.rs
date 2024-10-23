@@ -8,16 +8,16 @@ declare_id!("AN5RLVdXviuRtCs8jhMcWq4HgzkB3hTNjaWq1U6c8qCS");
 pub mod demo2 {
     use super::*;
 
-    pub fn perform_action(_ctx: Context<PerformAction>, action_data: u64) -> Result<()> {
+    pub fn perform_action(ctx: Context<PerformAction>, action_data: u64) -> Result<()> {
         msg!("Demo 2: Performing action with data: {}", action_data);
 
         // Call demo3.perform_action
-        // let demo3_program = ctx.accounts.demo3_program.to_account_info();
-        // let demo3_accounts = Demo3PerformAction {
-        //     demo3_program: demo3_program.to_account_info(),
-        // };
-        // let cpi_ctx = CpiContext::new(demo3_program, demo3_accounts);
-        // demo3::cpi::perform_action(cpi_ctx, action_data)?;
+        let demo3_program = ctx.accounts.demo3_program.to_account_info();
+        let demo3_accounts = Demo3PerformAction {
+            demo3_program: demo3_program.to_account_info(),
+        };
+        let cpi_ctx = CpiContext::new(demo3_program, demo3_accounts);
+        demo3::cpi::perform_action(cpi_ctx, action_data)?;
 
         Ok(())
     }

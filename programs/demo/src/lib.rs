@@ -2,7 +2,6 @@ use anchor_lang::prelude::*;
 use demo2::program::Demo2;
 use demo2::cpi::accounts::PerformAction as Demo2PerformAction;
 use demo3::program::Demo3;
-use demo3::cpi::accounts::PerformAction as Demo3PerformAction;
 
 declare_id!("FncXY9fhaEx2Tb2rcqetJc2yFNDKDqU2QL7pDKzc7sJX");
 
@@ -21,13 +20,6 @@ pub mod demo {
         };
         let cpi_ctx = CpiContext::new(demo2_program, demo2_accounts);
         demo2::cpi::perform_action(cpi_ctx, action_data)?;
-
-        let demo3_program = ctx.accounts.demo3_program.to_account_info();
-        let demo3_accounts = Demo3PerformAction {
-            demo3_program: demo3_program.to_account_info(),
-        };
-        let cpi_ctx = CpiContext::new(demo3_program, demo3_accounts);
-        demo3::cpi::perform_action(cpi_ctx, action_data)?;
 
         // // Emit the ActionPerformedEvent
         // emit_cpi!(ActionPerformedEvent {
