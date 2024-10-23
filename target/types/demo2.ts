@@ -2,12 +2,12 @@
  * Program IDL in camelCase format in order to be used in JS/TS.
  *
  * Note that this is only a type helper and is not the actual IDL. The original
- * IDL can be found at `target/idl/demo.json`.
+ * IDL can be found at `target/idl/demo2.json`.
  */
-export type Demo = {
-  "address": "FncXY9fhaEx2Tb2rcqetJc2yFNDKDqU2QL7pDKzc7sJX",
+export type Demo2 = {
+  "address": "AN5RLVdXviuRtCs8jhMcWq4HgzkB3hTNjaWq1U6c8qCS",
   "metadata": {
-    "name": "demo",
+    "name": "demo2",
     "version": "0.1.0",
     "spec": "0.1.0",
     "description": "Created with Anchor"
@@ -27,44 +27,8 @@ export type Demo = {
       ],
       "accounts": [
         {
-          "name": "demo2Program",
-          "address": "AN5RLVdXviuRtCs8jhMcWq4HgzkB3hTNjaWq1U6c8qCS"
-        },
-        {
           "name": "demo3Program",
           "address": "GtEeAt513NhkteU1z1boBsZXwTeiGXVf3kRiAjk79nt8"
-        },
-        {
-          "name": "eventAuthority",
-          "pda": {
-            "seeds": [
-              {
-                "kind": "const",
-                "value": [
-                  95,
-                  95,
-                  101,
-                  118,
-                  101,
-                  110,
-                  116,
-                  95,
-                  97,
-                  117,
-                  116,
-                  104,
-                  111,
-                  114,
-                  105,
-                  116,
-                  121
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "name": "program"
         }
       ],
       "args": [

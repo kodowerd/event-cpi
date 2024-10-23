@@ -736,6 +736,23 @@ name = "demo"
 version = "0.1.0"
 dependencies = [
  "anchor-lang",
+ "demo2",
+ "demo3",
+]
+
+[[package]]
+name = "demo2"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+ "demo3",
+]
+
+[[package]]
+name = "demo3"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
 ]
 
 [[package]]

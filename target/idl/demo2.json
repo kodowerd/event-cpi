@@ -1,7 +1,7 @@
 {
-  "address": "FncXY9fhaEx2Tb2rcqetJc2yFNDKDqU2QL7pDKzc7sJX",
+  "address": "AN5RLVdXviuRtCs8jhMcWq4HgzkB3hTNjaWq1U6c8qCS",
   "metadata": {
-    "name": "demo",
+    "name": "demo2",
     "version": "0.1.0",
     "spec": "0.1.0",
     "description": "Created with Anchor"
@@ -21,44 +21,8 @@
       ],
       "accounts": [
         {
-          "name": "demo2_program",
-          "address": "AN5RLVdXviuRtCs8jhMcWq4HgzkB3hTNjaWq1U6c8qCS"
-        },
-        {
           "name": "demo3_program",
           "address": "GtEeAt513NhkteU1z1boBsZXwTeiGXVf3kRiAjk79nt8"
-        },
-        {
-          "name": "event_authority",
-          "pda": {
-            "seeds": [
-              {
-                "kind": "const",
-                "value": [
-                  95,
-                  95,
-                  101,
-                  118,
-                  101,
-                  110,
-                  116,
-                  95,
-                  97,
-                  117,
-                  116,
-                  104,
-                  111,
-                  114,
-                  105,
-                  116,
-                  121
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "name": "program"
         }
       ],
       "args": [
